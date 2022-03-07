@@ -1,58 +1,108 @@
 body {
-background-color: rgb(253, 251, 251);
-font-size: 20px;
-font-family: Arial, Helvetica, sans-serif;
-margin: 0;
+    background-color: rgb(253, 251, 251);
+    font-size: 16px;
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 #cabecalho {
-position: fixed;
-top: 0;
-background-color: green;
-width: 100%;
-height: 150px;
+    position: fixed;
+    top: 0;
+    background-color: green;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
-#titulo {
-text-align: center;
-margin-top: 10px;
-color: white;
+
+#nav {
+    background-color: green;
+    padding: 10px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
-.home_login {
-color: white;
-margin: 10px 50px;
-text-decoration: none;
-}
+
 a:hover {
-background-color: red;
-color: black;
-transition: 0.5s;
+    background-color: yellow;
+    color: blue;
+    transition: 0.5s;
 }
+
 a:active {
-background-color: yellow;
-color: blue;
+    background-color: aqua;
 }
+
 #main {
-margin-top: 175px;
-float: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
 }
+
 #article {
-padding-left: 20px;
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
 }
-#section-one {
-width: 60%;
+
+.top-container {
+    display: inline-block;
 }
-#section_container {
-    width: 400px;
-display: flex;
+
+[data-tooltip] {
+    position: relative;
+    font-weight: bold;
+}
+  
+[data-tooltip]:after {
+    display: none;
+    position: absolute;
+    top: -5px;
+    padding: 5px;
+    border-radius: 3px;
+    left: calc(100% + 2px);
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    background-color: #0095ff;
+    color: White;
+}
+  
+[data-tooltip]:hover:after {
+    display: block;
+}
+
+#table {
+    font-family: monospace;
+    margin-left: 280px;
+    margin-bottom: 80px;
+}
+
+.number-red {
+    color: red;
+}
+.section {
+    padding: 20px;
+    text-align: left;
+}
+
+.lado-esquerdo, .lado-direito {
+    display: inline-block;
 }
 
 #aside {
-margin-top: 175px;
-text-align: left;
-width: 20%;
-float: right;
+    border-left: 4px solid black;
+    width: 20%;
+    padding: 20px;
+}
+
+#trybe-aside {
+    color: red;
+    line-height: 5px;
+    text-align: left;
 }
 
 #rodape {
-height: 50px;
-clear: both;
+    padding: 10px;
+    margin-top: 10px;
 }
